@@ -1,6 +1,4 @@
-import './style.css'
-
-import './style.css';
+import './styles/main.css';
 
 async function loadPartial(elementId, filePath) {
   const element = document.getElementById(elementId);
