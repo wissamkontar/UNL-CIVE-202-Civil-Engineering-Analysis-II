@@ -1,0 +1,91 @@
+.matters-section {
+  background: var(--white);
+  color: #111111;
+}
+
+.matters-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 90px);
+  border-top: 1px solid #d2d2d2;
+}
+
+.matters-title-cell,
+.matters-card {
+  min-height: 430px;
+  padding: 2.5rem;
+}
+
+.matters-title-cell {
+  border-right: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.matters-title-cell h1 {
+  margin: 0;
+  font-size: clamp(3.0rem, 5vw, 6rem);
+  line-height: 0.88;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.matters-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.matters-card-top {
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.matters-card:nth-child(3) {
+  border-right: 1px solid #d2d2d2;
+}
+
+.matters-card h2 {
+  margin: 1.8rem 0 1.6rem;
+  font-size: clamp(1.7rem, 2.4vw, 2.5rem);
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.matters-card p {
+  max-width: 560px;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.45vw, 1.55rem);
+  line-height: 1.25;
+}
+
+/* Small square icon */
+.square-icon {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #777;
+}
+
+.square-icon span {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 24px;
+  height: 24px;
+  background: #111111;
+}
+
+.square-icon-large {
+  width: 52px;
+  height: 52px;
+}
+
+.square-icon-large span {
+  width: 26px;
+  height: 26px;
+}
+
+.offset-icon span {
+  right: -16px;
+  bottom: -1px;
+}
