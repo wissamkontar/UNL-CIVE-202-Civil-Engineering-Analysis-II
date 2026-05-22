@@ -24,6 +24,9 @@ async function loadPartial(elementId, filePath) {
 loadPartial('site-header', '/partials/header.html');
 loadPartial('site-footer', '/partials/footer.html');
 
+loadPartial('course-overview', '/course/course-overview.html');
+loadPartial('course-matters', '/course/course-matters.html');
+
 function setupProjectFilters() {
   const tabs = document.querySelectorAll('.project-tab');
   const cards = document.querySelectorAll('.project-card');
