@@ -50,8 +50,3 @@ header {
   background: var(--sky);
   color: var(--blue);
 }
-
-.nav-links a.active {
-  background: var(--navy);
-  color: var(--white);
-}
