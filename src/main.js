@@ -26,6 +26,7 @@ loadPartial('site-footer', '/partials/footer.html');
 
 loadPartial('course-overview', '/course/course-overview.html');
 loadPartial('course-matters', '/course/course-matters.html');
+loadPartial('course-philosophy', '/course/course-philosophy.html');
 
 function setupProjectFilters() {
   const tabs = document.querySelectorAll('.project-tab');
