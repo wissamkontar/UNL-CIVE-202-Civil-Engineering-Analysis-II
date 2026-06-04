@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infrastructure Access & Bias | CIVE 202</title>
+  </head>
+
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <section class="project-detail-hero">
+        <div class="project-detail-hero-content">
+          <a href="/project.html" class="back-link">← Back to Projects</a>
+
+          <p class="project-detail-eyebrow">Project 4</p>
+
+          <h1>Infrastructure Access &amp; Bias</h1>
+
+          <p class="project-detail-summary">
+            Students use FEMA National Risk Index data to examine how definitions,
+            assumptions, and coding decisions can shape engineering conclusions about
+            natural hazard risk.
+          </p>
+
+          <div class="project-meta-grid">
+            <div>
+              <span>Category</span>
+              <strong>Infrastructure Analysis</strong>
+            </div>
+
+            <div>
+              <span>Focus Skill</span>
+              <strong>Interpret Data &amp; Bias</strong>
+            </div>
+
+            <div>
+              <span>Tools</span>
+              <strong>Python, Pandas, GeoPandas, Jupyter Notebook</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-detail-content">
+        <article class="project-section">
+          <div class="project-section-label">
+            <span>01</span>
+            <p>Client Prompt</p>
+          </div>
+
+          <div class="project-section-body">
+            <h2>Client Prompt</h2>
+
+            <p>
+              Risk Averse, LLC has hired your team to investigate how natural hazard risk
+              is defined, scored, and interpreted using FEMA National Risk Index data.
+              The client wants to understand whether different definitions of risk can lead
+              to different conclusions about which communities appear most vulnerable.
+            </p>
+
+            <p>
+              Students will compare the original National Risk Index scoring approach with
+              an alternative risk definition developed by their team. The goal is to determine
+              whether categorical bias may exist in how risk is measured, classified, and
+              communicated to decision-makers.
+            </p>
+
+            <h3>Client Requests</h3>
+
+            <ol>
+              <li>
+                Download, clean, and organize National Risk Index data for two selected
+                states at the Census Tract level.
+              </li>
+              <li>
+                Use NRI metadata files to understand and clarify important variables in
+                the dataset.
+              </li>
+              <li>
+                Use Social Vulnerability Index data as part of the analysis.
+              </li>
+              <li>
+                Join multiple datasets together to support future analysis for the client.
+              </li>
+              <li>
+                Handle missing or unavailable values appropriately in the dataset.
+              </li>
+              <li>
+                Generate summary tables or figures comparing risk scoring under both the
+                NRI definition and the team’s proposed definition.
+              </li>
+              <li>
+                Create at least one GeoPandas map that communicates risk information to
+                the client.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="project-section project-section-dark">
+          <div class="project-section-label">
+            <span>02</span>
+            <p>Project Files</p>
+          </div>
+
+          <div class="project-section-body">
+            <h2>Project Files</h2>
+
+            <p>
+              Download the project materials below.
+            </p>
+
+            <div class="project-file-grid">
+              <a href="/documents/project4/Project #4 - Client Prompt.docx" class="project-file-card" download>
+                <span>Client Prompt</span>
+                <p>Full client request, deliverables, and grading expectations.</p>
+              </a>
+
+              <a href="/documents/project4/project-4-crib-sheet.ipynb" class="project-file-card" download>
+                <span>Starter Notebook</span>
+                <p>Starter Python notebook for risk analysis, data joining, and mapping.</p>
+              </a>
+
+              <a href="/documents/project4/nri-data.zip" class="project-file-card" download>
+                <span>NRI Dataset</span>
+                <p>National Risk Index data files used for the two-state risk analysis.</p>
+              </a>
+
+              <a href="/documents/project4/nri-metadata.xlsx" class="project-file-card" download>
+                <span>NRI Metadata</span>
+                <p>Metadata file explaining variables in the National Risk Index dataset.</p>
+              </a>
+
+              <a href="/documents/project4/svi-data.zip" class="project-file-card" download>
+                <span>SVI Dataset</span>
+                <p>Social Vulnerability Index data used to support the risk comparison.</p>
+              </a>
+
+              <a href="/documents/project4/project-4-resources.pdf" class="project-file-card" download>
+                <span>Reference</span>
+                <p>Supporting documents or references for NRI, SVI, and risk definitions.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-section">
+          <div class="project-section-label">
+            <span>03</span>
+            <p>Deliverables and Requirements</p>
+          </div>
+
+          <div class="project-section-body">
+            <h3>Deliverables</h3>
+
+            <ul>
+              <li>
+                Raw and cleaned data files used in the Python code file.
+              </li>
+              <li>
+                A Python code file documenting the analysis used to generate the final results.
+              </li>
+              <li>
+                An annotated code document explaining each line or major block of code.
+              </li>
+              <li>
+                A scope of work defining the tasks completed for Risk Averse, LLC.
+              </li>
+              <li>
+                A Gantt chart showing project tasks, responsibilities, and schedule.
+              </li>
+              <li>
+                A timesheet documenting hours spent on each activity and by whom.
+              </li>
+              <li>
+                A GitHub repository link containing all code and project data files.
+              </li>
+              <li>
+                A written report summarizing the risk analysis findings for the client.
+              </li>
+            </ul>
+
+            <h3>Report Requirements</h3>
+
+            <ul>
+              <li>
+                A clear methodology explaining how the team defined risk so the analysis
+                can be reproduced.
+              </li>
+              <li>
+                A written comparison of the team’s proposed risk definition with the
+                original National Risk Index definition.
+              </li>
+              <li>
+                Discussion of ethical implications, including possible bias in risk definitions,
+                funding implications, data collection concerns, and how communities may
+                interpret the results.
+              </li>
+              <li>
+                A written comparison of results generated using both the NRI risk definition
+                and the proposed risk definition.
+              </li>
+              <li>
+                Discussion of how differences in risk scoring may affect communities impacted
+                by natural disasters and future mitigation funding decisions.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
