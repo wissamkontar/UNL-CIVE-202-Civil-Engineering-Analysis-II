@@ -20,14 +20,13 @@
 
           <p class="project-detail-summary">
             Students translate an Excel-based NDOT concrete mix design workflow into
-            a transparent, repeatable Python program using functions, user inputs,
-            and scenario testing.
+            a Python program using functions, user inputs, and scenario testing.
           </p>
 
           <div class="project-meta-grid">
             <div>
               <span>Category</span>
-              <strong>Structural / Geotechnical Engineering</strong>
+              <strong>Structural Engineering</strong>
             </div>
 
             <div>
@@ -55,450 +54,138 @@
 
             <p>
               The Nebraska Department of Transportation has contracted your firm to
-              migrate its existing concrete mix design model from an Excel-based workflow
-              to a Python-based system. The primary goal is to replicate and automate
-              the logic contained in the NDOT Mix Design worksheet so users can enter
-              material properties and design parameters step by step.
+              migrate an existing concrete mix design workflow from Excel into Python.
+              The goal is to recreate the logic from the NDOT mix design spreadsheet
+              so that engineers can enter material properties and design parameters in
+              a structured, repeatable way.
             </p>
 
             <p>
-              The final program should generate a clear weight chart for one cubic yard
-              of concrete. Beyond simple replication, this project improves the reliability
-              of the mix design process by moving calculations from an offline spreadsheet
-              to a transparent, repeatable Python workflow that could later be integrated
-              into a web-based tool.
-            </p>
-
-            <h3>Client</h3>
-
-            <p>
-              Nebraska Department of Transportation (NDOT)
+              Students will build a Python-based tool that automates key mix design
+              calculations, collects user inputs step by step, and produces a final
+              weight chart for one cubic yard of concrete. The project helps students
+              practice turning spreadsheet-based engineering logic into transparent,
+              reusable code.
             </p>
 
             <h3>Client Requests</h3>
 
             <ol>
               <li>
-                <strong>Translate the Excel logic into Python.</strong>
-                Replicate the calculations found in the Mix Design worksheet. Each major
-                calculation should be implemented as a clearly defined Python function.
-              </li>
-
-              <li>
-                <strong>Implement sequential user inputs.</strong>
-                The program should prompt users to enter required design inputs step by
-                step, including cement content, water–cement ratio, air content, aggregate
-                proportions, and specific gravities.
-              </li>
-
-              <li>
-                <strong>Generate a final mix design output.</strong>
-                The program should produce a clearly formatted weight chart for one cubic
-                yard of concrete. Output values should be labeled and presented in a
-                professional, client-readable format.
-              </li>
-
-              <li>
-                <strong>Prepare and evaluate four concrete mix scenarios.</strong>
-                Students must research four realistic concrete mix scenarios and evaluate
-                each one using the automated Python workflow as a basic form of verification
-                and validation.
-              </li>
-            </ol>
-
-            <h3>Resources Provided by the Client</h3>
-
-            <ul>
-              <li>NDOT Concrete Mix Excel workbook.</li>
-              <li>NDOT report on optimized aggregate gradations for concrete mix design.</li>
-              <li>NDOT Standard Specifications for Highway Construction.</li>
-            </ul>
-
-            <h3>Deliverables</h3>
-
-            <ul>
-              <li>
-                GitHub repository containing code, data, and a README file with a user guide
-                for the sequential input prompts.
-              </li>
-              <li>
-                Scope of Work defining the tasks completed to automate the NDOT model.
-              </li>
-              <li>
-                Gantt chart showing project tasks, responsibilities, dates, and task bars.
-              </li>
-              <li>
-                Four researched concrete mix design scenarios evaluated using the Python model.
-              </li>
-              <li>
-                Jupyter Notebook documenting the automation logic, sequential prompts, and
-                four scenario runs.
-              </li>
-              <li>
-                Annotated Code Document explaining how the Excel formulas were converted
+                Translate the calculations from the NDOT concrete mix design spreadsheet
                 into Python functions.
               </li>
               <li>
-                Technical report with introduction, methods, results/discussion, and references.
+                Create sequential user inputs so an engineer can enter required design
+                values in a logical order.
               </li>
-            </ul>
-
-            <h3>Skills Students Will Practice</h3>
-
-            <ul>
-              <li>Creating interactive Python scripts using sequential input prompts.</li>
-              <li>Translating engineering formulas from Excel into Python functions.</li>
-              <li>Using Gantt charts to manage project timelines and dependencies.</li>
-              <li>Managing professional code repositories with GitHub and README documentation.</li>
-              <li>Writing a Scope of Work and technical report for an engineering client.</li>
-              <li>Creating annotated code for transparency and accountability.</li>
-              <li>Applying NDOT specifications to a data-driven engineering workflow.</li>
-            </ul>
+              <li>
+                Generate a final concrete mix design output with clearly labeled material
+                weights for one cubic yard of concrete.
+              </li>
+              <li>
+                Research and evaluate four realistic concrete mix scenarios using the
+                automated Python workflow.
+              </li>
+            </ol>
           </div>
         </article>
 
         <article class="project-section project-section-dark">
           <div class="project-section-label">
             <span>02</span>
-            <p>Starter Code</p>
+            <p>Project Files</p>
           </div>
 
           <div class="project-section-body">
-            <h2>Starter Code</h2>
+            <h2>Project Files</h2>
 
             <p>
-              This starter code helps students translate the NDOT mix design worksheet into
-              Python. It introduces constants, calculation functions, sequential user inputs,
-              and a final client-readable weight chart.
+              Download the project materials below.
             </p>
 
-            <pre><code># Project #2: Automation of Concrete Mix Design
-# Client: Nebraska Department of Transportation (NDOT)
+            <div class="project-file-grid">
+              <a href="public/documents/project2/Project 2 - Client Prompt.docx" class="project-file-card" download>
+                <span>Client Prompt</span>
+                <p>Full client request, deliverables, and grading expectations.</p>
+              </a>
 
-project_name = "Project #2: Automation of NDOT Concrete Mix Design"
-client = "Nebraska Department of Transportation (NDOT)"
+              <a href="public/documents/project2/Project 2 - Crib Sheet.ipynb" class="project-file-card" download>
+                <span>Starter Notebook</span>
+                <p>Starter Python notebook with guided setup and sample automation code.</p>
+              </a>
 
-print(project_name)
-print(f"Client: {client}")</code></pre>
+              <a href="" class="project-file-card" download>
+                <span>Spreadsheet</span>
+                <p>NDOT concrete mix design spreadsheet used as the source workflow.</p>
+              </a>
 
-            <pre><code># ------------------------------------------------------------
-# Step 1: Define constants
-# ------------------------------------------------------------
-
-CUBIC_YARD_FT3 = 27        # cubic feet in one cubic yard
-UNIT_WEIGHT_WATER = 62.4   # lb/ft^3
-
-print(f"1 cubic yard = {CUBIC_YARD_FT3} cubic feet")
-print(f"Unit weight of water = {UNIT_WEIGHT_WATER} lb/ft^3")</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 2: Calculate water weight
-# ------------------------------------------------------------
-# Q = (A + B + C + D) * E
-#
-# A = cement weight
-# B = fly ash weight
-# C = silica fume weight
-# D = other SCM weight
-# E = target water-cement ratio
-
-def calculate_water_weight_Q(cement_A, fly_ash_B, silica_fume_C, other_scm_D, wc_ratio_E):
-    total_cementitious = cement_A + fly_ash_B + silica_fume_C + other_scm_D
-    water_weight_Q = total_cementitious * wc_ratio_E
-    return water_weight_Q</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 3: Calculate cementitious material volumes
-# ------------------------------------------------------------
-# General formula:
-# Volume = Weight / (Specific Gravity * Unit Weight of Water)
-
-def calculate_volume_R(cement_A, sg_cement_J):
-    volume_R = cement_A / (sg_cement_J * UNIT_WEIGHT_WATER)
-    return volume_R
-
-
-def calculate_volume_S(fly_ash_B, sg_fly_ash_K):
-    volume_S = fly_ash_B / (sg_fly_ash_K * UNIT_WEIGHT_WATER)
-    return volume_S
-
-
-def calculate_volume_T(silica_fume_C, sg_silica_fume_L):
-    volume_T = silica_fume_C / (sg_silica_fume_L * UNIT_WEIGHT_WATER)
-    return volume_T
-
-
-def calculate_volume_U(other_scm_D, sg_other_scm_M):
-    volume_U = other_scm_D / (sg_other_scm_M * UNIT_WEIGHT_WATER)
-    return volume_U</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 4: Calculate air and water volumes
-# ------------------------------------------------------------
-
-def calculate_air_volume_V(air_content_F):
-    volume_V = (air_content_F / 100) * CUBIC_YARD_FT3
-    return volume_V
-
-
-def calculate_water_volume_W(water_weight_Q):
-    volume_W = water_weight_Q / UNIT_WEIGHT_WATER
-    return volume_W</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 5: Calculate total aggregate volume
-# ------------------------------------------------------------
-# X = 27 - R - S - T - U - V - W
-
-def calculate_total_aggregate_volume_X(volume_R, volume_S, volume_T, volume_U, volume_V, volume_W):
-    volume_X = CUBIC_YARD_FT3 - volume_R - volume_S - volume_T - volume_U - volume_V - volume_W
-    return volume_X</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 6: Calculate aggregate weights
-# ------------------------------------------------------------
-# Y  = fine aggregate weight
-# Z  = coarse aggregate weight
-# AA = other aggregate weight
-
-def calculate_fine_aggregate_Y(percent_fine_G, sg_fine_N, volume_X):
-    weight_Y = UNIT_WEIGHT_WATER * (percent_fine_G / 100) * sg_fine_N * volume_X
-    return weight_Y
-
-
-def calculate_coarse_aggregate_Z(percent_coarse_H, sg_coarse_O, volume_X):
-    weight_Z = UNIT_WEIGHT_WATER * (percent_coarse_H / 100) * sg_coarse_O * volume_X
-    return weight_Z
-
-
-def calculate_other_aggregate_AA(percent_other_I, sg_other_P, volume_X):
-    weight_AA = UNIT_WEIGHT_WATER * (percent_other_I / 100) * sg_other_P * volume_X
-    return weight_AA</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 7: Collect sequential user inputs
-# ------------------------------------------------------------
-# These prompts mirror the idea of moving through the Excel worksheet
-# in a controlled, step-by-step order.
-
-project_number = int(input("Enter project number: "))
-class_of_concrete = input("Enter class of concrete, such as 47B or 47BR: ")
-
-# Cementitious material inputs
-cement_A = float(input("Enter cement weight A (lb per cubic yard): "))
-fly_ash_B = float(input("Enter fly ash weight B (lb per cubic yard): "))
-silica_fume_C = float(input("Enter silica fume weight C (lb per cubic yard): "))
-other_scm_D = float(input("Enter other SCM weight D (lb per cubic yard): "))
-
-# Design parameters
-water_cement_ratio_E = float(input("Enter target water-cement ratio E: "))
-air_content_F = float(input("Enter target air content F (%): "))
-
-# Aggregate proportions
-percent_fine_G = float(input("Enter percent fine aggregate G (%): "))
-percent_coarse_H = float(input("Enter percent coarse aggregate H (%): "))
-percent_other_I = float(input("Enter percent other aggregate I (%): "))
-
-# Specific gravities
-sg_cement_J = float(input("Enter specific gravity of cement J: "))
-sg_fly_ash_K = float(input("Enter specific gravity of fly ash K: "))
-sg_silica_fume_L = float(input("Enter specific gravity of silica fume L: "))
-sg_other_scm_M = float(input("Enter specific gravity of other SCM M: "))
-
-sg_fine_N = float(input("Enter specific gravity of fine aggregate N: "))
-sg_coarse_O = float(input("Enter specific gravity of coarse aggregate O: "))
-sg_other_P = float(input("Enter specific gravity of other aggregate P: "))
-
-print("\nAll user inputs collected successfully.")</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 8: Run the complete mix design calculation
-# ------------------------------------------------------------
-
-Q = calculate_water_weight_Q(
-    cement_A,
-    fly_ash_B,
-    silica_fume_C,
-    other_scm_D,
-    water_cement_ratio_E
-)
-
-R = calculate_volume_R(cement_A, sg_cement_J)
-S = calculate_volume_S(fly_ash_B, sg_fly_ash_K)
-T = calculate_volume_T(silica_fume_C, sg_silica_fume_L)
-U = calculate_volume_U(other_scm_D, sg_other_scm_M)
-
-V = calculate_air_volume_V(air_content_F)
-W = calculate_water_volume_W(Q)
-
-X = calculate_total_aggregate_volume_X(R, S, T, U, V, W)
-
-Y = calculate_fine_aggregate_Y(percent_fine_G, sg_fine_N, X)
-Z = calculate_coarse_aggregate_Z(percent_coarse_H, sg_coarse_O, X)
-AA = calculate_other_aggregate_AA(percent_other_I, sg_other_P, X)</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 9: Print final client-readable weight chart
-# ------------------------------------------------------------
-
-print("\n---------------------------------------------")
-print(" NDOT Concrete Mix Design - Weight Summary")
-print("         1 Cubic Yard of Concrete")
-print("---------------------------------------------")
-
-print(f"Project Number:       {project_number}")
-print(f"Class of Concrete:    {class_of_concrete}")
-
-print("---------------------------------------------")
-print("Cementitious Materials")
-print("---------------------------------------------")
-print(f"Cement (A):            {cement_A:8.1f} lb")
-print(f"Fly Ash (B):           {fly_ash_B:8.1f} lb")
-print(f"Silica Fume (C):       {silica_fume_C:8.1f} lb")
-print(f"Other SCM (D):         {other_scm_D:8.1f} lb")
-
-print("---------------------------------------------")
-print("Aggregates")
-print("---------------------------------------------")
-print(f"Fine Aggregate (Y):    {Y:8.0f} lb")
-print(f"Coarse Aggregate (Z):  {Z:8.0f} lb")
-print(f"Other Aggregate (AA):  {AA:8.0f} lb")
-
-print("---------------------------------------------")
-print("Water")
-print("---------------------------------------------")
-print(f"Water (Q):             {Q:8.0f} lb")
-
-print("---------------------------------------------")
-print("Volume Checks")
-print("---------------------------------------------")
-print(f"Cement Volume (R):     {R:8.3f} ft^3")
-print(f"Fly Ash Volume (S):    {S:8.3f} ft^3")
-print(f"Silica Fume Volume (T):{T:8.3f} ft^3")
-print(f"Other SCM Volume (U):  {U:8.3f} ft^3")
-print(f"Air Volume (V):        {V:8.3f} ft^3")
-print(f"Water Volume (W):      {W:8.3f} ft^3")
-print(f"Aggregate Volume (X):  {X:8.3f} ft^3")
-
-print("---------------------------------------------")
-print("End of Mix Design Summary")</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 10: Scenario testing template
-# ------------------------------------------------------------
-# Students should research and test four realistic concrete mix scenarios.
-# Each scenario should be expressible using the model inputs.
-
-scenario_results = []
-
-def run_mix_design_scenario(
-    scenario_name,
-    cement_A,
-    fly_ash_B,
-    silica_fume_C,
-    other_scm_D,
-    water_cement_ratio_E,
-    air_content_F,
-    percent_fine_G,
-    percent_coarse_H,
-    percent_other_I,
-    sg_cement_J,
-    sg_fly_ash_K,
-    sg_silica_fume_L,
-    sg_other_scm_M,
-    sg_fine_N,
-    sg_coarse_O,
-    sg_other_P
-):
-    Q = calculate_water_weight_Q(
-        cement_A,
-        fly_ash_B,
-        silica_fume_C,
-        other_scm_D,
-        water_cement_ratio_E
-    )
-
-    R = calculate_volume_R(cement_A, sg_cement_J)
-    S = calculate_volume_S(fly_ash_B, sg_fly_ash_K)
-    T = calculate_volume_T(silica_fume_C, sg_silica_fume_L)
-    U = calculate_volume_U(other_scm_D, sg_other_scm_M)
-
-    V = calculate_air_volume_V(air_content_F)
-    W = calculate_water_volume_W(Q)
-    X = calculate_total_aggregate_volume_X(R, S, T, U, V, W)
-
-    Y = calculate_fine_aggregate_Y(percent_fine_G, sg_fine_N, X)
-    Z = calculate_coarse_aggregate_Z(percent_coarse_H, sg_coarse_O, X)
-    AA = calculate_other_aggregate_AA(percent_other_I, sg_other_P, X)
-
-    return {
-        "scenario": scenario_name,
-        "cement_lb": cement_A,
-        "fly_ash_lb": fly_ash_B,
-        "silica_fume_lb": silica_fume_C,
-        "other_scm_lb": other_scm_D,
-        "water_lb": Q,
-        "fine_aggregate_lb": Y,
-        "coarse_aggregate_lb": Z,
-        "other_aggregate_lb": AA,
-        "aggregate_volume_ft3": X
-    }</code></pre>
-
-            <pre><code># Example scenario.
-# Students should replace these values with four researched scenarios.
-
-scenario_1 = run_mix_design_scenario(
-    scenario_name="Example Mix 1",
-    cement_A=600,
-    fly_ash_B=100,
-    silica_fume_C=30,
-    other_scm_D=70,
-    water_cement_ratio_E=0.42,
-    air_content_F=6.0,
-    percent_fine_G=45,
-    percent_coarse_H=50,
-    percent_other_I=5,
-    sg_cement_J=3.15,
-    sg_fly_ash_K=2.30,
-    sg_silica_fume_L=2.20,
-    sg_other_scm_M=2.60,
-    sg_fine_N=2.65,
-    sg_coarse_O=2.70,
-    sg_other_P=2.60
-)
-
-scenario_results.append(scenario_1)
-
-scenario_results_df = pd.DataFrame(scenario_results)
-scenario_results_df</code></pre>
+              <a href="public/documents/project2/Project 2 - Student Template.ipynb" class="project-file-card" download>
+                <span>Reference</span>
+                <p>Supporting documents, specifications, or engineering references for the project.</p>
+              </a>
+            </div>
           </div>
         </article>
 
         <article class="project-section">
           <div class="project-section-label">
             <span>03</span>
-            <p>Project Checklist</p>
+            <p>Deliverables and Requirements</p>
           </div>
 
           <div class="project-section-body">
-            <h2>Before Submitting</h2>
-
-            <p>
-              Use this checklist to make sure the final submission is complete,
-              reproducible, and client-ready.
-            </p>
+            <h3>Deliverables</h3>
 
             <ul>
-              <li>The notebook defines clear Python functions for the major Excel calculations.</li>
-              <li>The notebook collects inputs in a logical sequence that mirrors the mix design workflow.</li>
-              <li>The code generates a final weight chart for one cubic yard of concrete.</li>
-              <li>Four realistic concrete mix scenarios are researched, documented, and tested.</li>
-              <li>The GitHub repository contains code, data, and a README user guide.</li>
-              <li>The Scope of Work clearly explains the tasks completed for NDOT.</li>
-              <li>The Gantt chart shows project tasks, dates, responsibilities, and dependencies.</li>
-              <li>The Annotated Code Document explains how Excel formulas were translated into Python.</li>
-              <li>The technical report includes introduction, methods, results/discussion, and references.</li>
-              <li>The final repository link is submitted to Canvas by the project deadline.</li>
+              <li>
+                A GitHub repository containing the code, data files, and a README file
+                explaining how to use the program.
+              </li>
+              <li>
+                A Python Jupyter Notebook documenting the automation logic, user input
+                prompts, and four mix design scenario runs.
+              </li>
+              <li>
+                Four researched concrete mix design scenarios that can be evaluated using
+                the automated model.
+              </li>
+              <li>
+                A well-written scope of work defining the tasks completed to automate the
+                NDOT concrete mix design workflow.
+              </li>
+              <li>
+                A Gantt chart showing project tasks, responsibilities, dates, and task bars.
+              </li>
+              <li>
+                An annotated code document explaining how the Excel formulas were translated
+                into Python functions.
+              </li>
+              <li>
+                A technical report summarizing the implementation, scenario results, and
+                engineering interpretation.
+              </li>
+            </ul>
+
+            <h3>Report Requirements</h3>
+
+            <ul>
+              <li>
+                Introduction/background explaining the NDOT project and the objective of
+                automating the concrete mix design workflow.
+              </li>
+              <li>
+                Methods section explaining how the Excel calculations were translated into
+                Python, including key input and output parameters.
+              </li>
+              <li>
+                Results and discussion section comparing the four concrete mix scenarios
+                and explaining the differences in the generated outputs.
+              </li>
+              <li>
+                Reference list and in-text citations for NDOT documents and any other
+                engineering references used.
+              </li>
             </ul>
           </div>
         </article>

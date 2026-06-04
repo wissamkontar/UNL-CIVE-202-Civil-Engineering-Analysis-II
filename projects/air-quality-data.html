@@ -70,12 +70,6 @@
               “hotspots” may exist.
             </p>
 
-            <h3>Client</h3>
-
-            <p>
-              UNMC Water, Climate and Health Group
-            </p>
-
             <h3>Client Requests</h3>
 
             <ol>
@@ -101,17 +95,55 @@
               <li>
                 Bonus: Analyze whether sensor altitude has an impact on air-quality values.
               </li>
-            </ol>
+            </ol>            
 
-            <h3>Resources Provided by the Client</h3>
+          </div>
+        </article>
 
-            <ul>
-              <li>AirPurple Map</li>
-              <li>Purple Air Community</li>
-              <li>EPA Air Quality Index Document</li>
-              <li>AirNow website</li>
-            </ul>
+        <article class="project-section project-section-dark">
+          <div class="project-section-label">
+            <span>02</span>
+            <p>Project Files</p>
+          </div>
 
+          <div class="project-section-body">
+            <h2>Project Files</h2>
+
+            <p>
+              Download the project materials below. 
+            </p>
+
+            <div class="project-file-grid">
+              <a href="public/documents/project1/Project 1 - Client Prompt - Student Version.docx" class="project-file-card" download>
+                <span>Client Prompt</span>
+                <p>Full client request, deliverables, and grading expectations.</p>
+              </a>
+
+              <a href="public/documents/project1/Project 1 Krib Sheet.ipynb" class="project-file-card" download>
+                <span>Starter Notebook</span>
+                <p>Starter Python notebook with guided setup and sample analysis code.</p>
+              </a>
+
+              <a href="public/documents/project1/AirQuality_Daily_StudentVersion.csv" class="project-file-card" download>
+                <span>Dataset</span>
+                <p>Dataset used for the project analysis.</p>
+              </a>
+
+              <a href="" class="project-file-card" download>
+                <span>Reference</span>
+                <p>Helpful documents, tables, or external references for the project.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-section">
+          <div class="project-section-label">
+            <span>03</span>
+            <p>Deliverables and Requirements</p>
+          </div>
+
+          <div class="project-section-body">
             <h3>Deliverables</h3>
 
             <ul>
@@ -152,275 +184,6 @@
               <li>
                 Reference list and in-text citations for all resources used.
               </li>
-            </ul>
-
-            <h3>Skills Students Will Practice</h3>
-
-            <ul>
-              <li>Reviewing basic Python functions.</li>
-              <li>Writing a scope of work.</li>
-              <li>Outlining functions and steps in code.</li>
-              <li>Identifying sources and types of data.</li>
-              <li>Extracting and loading data into Python.</li>
-              <li>Using Python to compute basic statistics.</li>
-              <li>Organizing raw data for analysis.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="project-section project-section-dark">
-          <div class="project-section-label">
-            <span>02</span>
-            <p>Starter Code</p>
-          </div>
-
-          <div class="project-section-body">
-            <h2>Starter Code</h2>
-
-            <p>
-              This starter code gives students a structured beginning for loading the AirPurple
-              dataset, creating humidity and temperature categories, grouping by sensor name,
-              summarizing pollutant values, identifying AQI concern events, and exploring the
-              optional altitude question.
-            </p>
-
-            <pre><code>import pandas as pd
-
-# ------------------------------------------------------------
-# Step 1: Load and inspect the air-quality dataset
-# ------------------------------------------------------------
-
-air_data = pd.read_csv("AirQuality_Daily_StudentVersion.csv")
-
-# Convert to a dataframe. This is optional because read_csv already
-# returns a dataframe, but it makes the structure explicit.
-air_data = pd.DataFrame(air_data)
-
-# Preview the dataset
-air_data.head()
-
-# Check available columns
-air_data.columns</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 2: Create humidity and temperature categories
-# ------------------------------------------------------------
-
-def assign_humidity(humidity):
-    if humidity &lt; 50:
-        return "Low"
-    elif 50 &lt;= humidity &lt;= 80:
-        return "High"
-    else:
-        return "Very High"
-
-
-def assign_temperature(temperature):
-    if temperature &lt; 32:
-        return "Below Freezing"
-    elif 32 &lt;= temperature &lt;= 50:
-        return "Cool"
-    elif 51 &lt;= temperature &lt;= 70:
-        return "Warm"
-    else:
-        return "Hot"
-
-
-air_data["humidity_level"] = air_data["humidity"].apply(assign_humidity)
-air_data["temperature_level"] = air_data["temperature"].apply(assign_temperature)
-
-air_data[["humidity", "humidity_level", "temperature", "temperature_level"]].head()</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 3: Group data by sensor name
-# ------------------------------------------------------------
-
-air_data_grouped = air_data.groupby("sensor.name")
-
-# Summary statistics for PM 2.5
-pm25_summary = air_data_grouped.agg(
-    max_pm25=("pm2.5_atm", "max"),
-    min_pm25=("pm2.5_atm", "min"),
-    mean_pm25=("pm2.5_atm", "mean"),
-    median_pm25=("pm2.5_atm", "median")
-).round(2)
-
-pm25_summary.head()</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 4: Summarize PM 10.0 and VOC values by sensor
-# ------------------------------------------------------------
-
-pm10_summary = air_data_grouped.agg(
-    max_pm10=("pm10.0_atm", "max"),
-    min_pm10=("pm10.0_atm", "min"),
-    mean_pm10=("pm10.0_atm", "mean"),
-    median_pm10=("pm10.0_atm", "median")
-).round(2)
-
-voc_summary = air_data_grouped.agg(
-    max_voc=("voc", "max"),
-    min_voc=("voc", "min"),
-    mean_voc=("voc", "mean"),
-    median_voc=("voc", "median")
-).round(2)
-
-pm10_summary.head()
-voc_summary.head()</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 5: Find the top 5 sensor locations by mean and median
-# ------------------------------------------------------------
-
-top5_mean_pm25 = pm25_summary.sort_values(
-    by="mean_pm25",
-    ascending=False
-).head(5)
-
-top5_median_pm25 = pm25_summary.sort_values(
-    by="median_pm25",
-    ascending=False
-).head(5)
-
-top5_mean_pm25
-top5_median_pm25</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 6: Analyze humidity effects on air quality
-# ------------------------------------------------------------
-
-humidity_grouped = air_data.groupby("humidity_level")
-
-humidity_pm25_summary = humidity_grouped.agg(
-    max_pm25=("pm2.5_atm", "max"),
-    min_pm25=("pm2.5_atm", "min"),
-    mean_pm25=("pm2.5_atm", "mean"),
-    median_pm25=("pm2.5_atm", "median")
-).round(2)
-
-humidity_pm10_summary = humidity_grouped.agg(
-    max_pm10=("pm10.0_atm", "max"),
-    min_pm10=("pm10.0_atm", "min"),
-    mean_pm10=("pm10.0_atm", "mean"),
-    median_pm10=("pm10.0_atm", "median")
-).round(2)
-
-humidity_voc_summary = humidity_grouped.agg(
-    max_voc=("voc", "max"),
-    min_voc=("voc", "min"),
-    mean_voc=("voc", "mean"),
-    median_voc=("voc", "median")
-).round(2)
-
-humidity_pm25_summary</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 7: Analyze temperature effects on air quality
-# ------------------------------------------------------------
-
-temperature_grouped = air_data.groupby("temperature_level")
-
-temperature_pm25_summary = temperature_grouped.agg(
-    max_pm25=("pm2.5_atm", "max"),
-    min_pm25=("pm2.5_atm", "min"),
-    mean_pm25=("pm2.5_atm", "mean"),
-    median_pm25=("pm2.5_atm", "median")
-).round(2)
-
-temperature_pm25_summary</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 8: Identify AQI concern events
-# ------------------------------------------------------------
-# PM 2.5 becomes unhealthy for sensitive groups at 35.5 µg/m³.
-# PM 10.0 becomes unhealthy for sensitive groups at 155 µg/m³.
-
-air_data["pm2.5_atm"] = pd.to_numeric(air_data["pm2.5_atm"], errors="coerce")
-air_data["pm10.0_atm"] = pd.to_numeric(air_data["pm10.0_atm"], errors="coerce")
-
-unhealthy_pm25 = air_data[air_data["pm2.5_atm"] &gt;= 35.5]
-unhealthy_pm10 = air_data[air_data["pm10.0_atm"] &gt;= 155]
-
-unhealthy_pm25_events = unhealthy_pm25[
-    ["date", "sensor.name", "pm2.5_atm"]
-].sort_values("date")
-
-unhealthy_pm10_events = unhealthy_pm10[
-    ["date", "sensor.name", "pm10.0_atm"]
-].sort_values("date")
-
-unhealthy_pm25_events.head(10)</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Step 9: Create a summary table for AQI concern events
-# ------------------------------------------------------------
-
-pm25_aqi_summary = pd.pivot_table(
-    unhealthy_pm25,
-    index="sensor.name",
-    values="pm2.5_atm",
-    aggfunc=["count", "mean", "max"]
-).round(2)
-
-pm25_aqi_summary</code></pre>
-
-            <pre><code># ------------------------------------------------------------
-# Optional Bonus: Explore whether altitude relates to air quality
-# ------------------------------------------------------------
-# This is a more advanced analysis. Students should explain
-# any code used here in the annotated code document.
-
-import matplotlib.pyplot as plt
-from scipy.stats import pearsonr, spearmanr
-
-altitude_voc_data = air_data[["sensor.altitude", "voc"]].dropna()
-
-plt.scatter(altitude_voc_data["sensor.altitude"], altitude_voc_data["voc"])
-plt.xlabel("Sensor Altitude")
-plt.ylabel("VOC Concentration")
-plt.title("VOC Concentration vs. Sensor Altitude")
-plt.show()
-
-pearson_r, pearson_p = pearsonr(
-    altitude_voc_data["sensor.altitude"],
-    altitude_voc_data["voc"]
-)
-
-spearman_r, spearman_p = spearmanr(
-    altitude_voc_data["sensor.altitude"],
-    altitude_voc_data["voc"]
-)
-
-print(f"Pearson correlation coefficient: {pearson_r:.3f}")
-print(f"Pearson p-value: {pearson_p:.3e}")
-print(f"Spearman correlation coefficient: {spearman_r:.3f}")
-print(f"Spearman p-value: {spearman_p:.3e}")</code></pre>
-          </div>
-        </article>
-
-        <article class="project-section">
-          <div class="project-section-label">
-            <span>03</span>
-            <p>Project Checklist</p>
-          </div>
-
-          <div class="project-section-body">
-            <h2>Before Submitting</h2>
-
-            <p>
-              Use this checklist to make sure the final submission is complete and client-ready.
-            </p>
-
-            <ul>
-              <li>The notebook loads the provided air-quality CSV successfully.</li>
-              <li>The code groups results by sensor name where appropriate.</li>
-              <li>The analysis identifies top locations for VOC, PM 2.5, and PM 10.0.</li>
-              <li>The analysis identifies dates and locations of maximum pollutant values.</li>
-              <li>Humidity and temperature categories are created and used in the analysis.</li>
-              <li>AQI concern events are identified for PM 2.5 and PM 10.0.</li>
-              <li>The scope of work explains the tasks completed for the client.</li>
-              <li>The annotated code document explains the purpose of each major code block.</li>
-              <li>The written report includes introduction, methods, results/discussion, and references.</li>
             </ul>
           </div>
         </article>
