@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balanced Mix Design Automation | CIVE 202</title>
+  </head>
+
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <section class="project-detail-hero">
+        <div class="project-detail-hero-content">
+          <a href="/project.html" class="back-link">← Back to Projects</a>
+
+          <p class="project-detail-eyebrow">Project 5D</p>
+
+          <h1>Balanced Mix Design Automation</h1>
+
+          <p class="project-detail-summary">
+            Students automate NDOT asphalt mix design workflows using raw performance
+            test data, engineering calculations, plots, and pass/fail decision metrics.
+          </p>
+
+          <div class="project-meta-grid">
+            <div>
+              <span>Category</span>
+              <strong>Geotechnical Engineering</strong>
+            </div>
+
+            <div>
+              <span>Focus Skill</span>
+              <strong>Integrate Data Analysis Skills</strong>
+            </div>
+
+            <div>
+              <span>Tools</span>
+              <strong>Python, Pandas, Functions, Visualization</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-detail-content">
+        <article class="project-section">
+          <div class="project-section-label">
+            <span>01</span>
+            <p>Client Prompt</p>
+          </div>
+
+          <div class="project-section-body">
+            <h2>Client Prompt</h2>
+
+            <p>
+              The Nebraska Department of Transportation is transitioning its asphalt mixture
+              approval process to a Balanced Mix Design framework. This approach requires
+              engineers to analyze raw performance test data for cracking and rutting instead
+              of relying only on simple volumetric measurements.
+            </p>
+
+            <p>
+              NDOT currently uses a spreadsheet-based workflow that requires manual
+              copy-pasting and calculations. Students are asked to develop a Python-based
+              automation tool that can process raw input data, calculate engineering decision
+              metrics, generate plots, and produce repeatable outputs for future asphalt mix
+              design evaluations.
+            </p>
+
+            <h3>Client Requests</h3>
+
+            <ol>
+              <li>
+                Create an aggregate gradation module that reads sieve data and blend ratios,
+                plots the combined gradation curve, and compares results to NDOT control points.
+              </li>
+              <li>
+                Create a volumetric properties calculator that reads measurements, applies the
+                required equations, and flags invalid samples based on air void criteria.
+              </li>
+              <li>
+                Create an IDEAL-CT module that analyzes load-displacement data and calculates
+                the CT index from cracking performance test results.
+              </li>
+              <li>
+                Create a Hamburg Wheel Tracking Test module that analyzes rut depth over cycles,
+                identifies the stripping inflection point, and determines pass/fail performance.
+              </li>
+              <li>
+                Generate clean plots and summary outputs that can be used in an engineering report.
+              </li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="project-section project-section-dark">
+          <div class="project-section-label">
+            <span>02</span>
+            <p>Project Files</p>
+          </div>
+
+          <div class="project-section-body">
+            <h2>Project Files</h2>
+
+            <p>
+              Download the project materials below.
+            </p>
+
+            <div class="project-file-grid">
+              <a href="/documents/project5/Project 5 - Client Prompts and Information.docx" class="project-file-card" download>
+                <span>Client Prompt</span>
+                <p>Full Project 5 client prompts, deliverables, and grading expectations.</p>
+              </a>
+
+              <a href="/documents/project5/project-5d-crib-sheet.ipynb" class="project-file-card" download>
+                <span>Starter Notebook</span>
+                <p>Starter Python notebook for balanced mix design automation and testing modules.</p>
+              </a>
+
+              <a href="/documents/project5/AutoBMD.xlsx" class="project-file-card" download>
+                <span>Dataset</span>
+                <p>Balanced mix design spreadsheet and raw data source for the automation workflow.</p>
+              </a>
+
+              <a href="/documents/project5/project-5d-resources.pdf" class="project-file-card" download>
+                <span>Reference</span>
+                <p>Supporting resources for aggregate gradation, volumetrics, cracking, and rutting analysis.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-section">
+          <div class="project-section-label">
+            <span>03</span>
+            <p>Deliverables and Requirements</p>
+          </div>
+
+          <div class="project-section-body">
+            <h3>Deliverables</h3>
+
+            <ul>
+              <li>
+                A fully functional Python notebook or code file that runs the balanced mix
+                design automation workflow.
+              </li>
+              <li>
+                A module for aggregate gradation analysis with a combined gradation plot.
+              </li>
+              <li>
+                A module for volumetric property calculations and air void validity checks.
+              </li>
+              <li>
+                A module for IDEAL-CT analysis with load-displacement plots and CT index values.
+              </li>
+              <li>
+                A module for Hamburg Wheel Tracking Test analysis with rut depth plots,
+                stripping inflection point detection, and pass/fail output.
+              </li>
+              <li>
+                A user guide explaining how an NDOT engineer should format input data for the tool.
+              </li>
+              <li>
+                A scope of work describing the automation tasks completed for the client.
+              </li>
+              <li>
+                A Gantt chart showing project tasks, responsibilities, dates, and task bars.
+              </li>
+              <li>
+                A timesheet documenting hours spent on each major project activity.
+              </li>
+              <li>
+                Technical and non-technical executive summaries.
+              </li>
+              <li>
+                A written report summarizing the automated workflow, results, and engineering decisions.
+              </li>
+            </ul>
+
+            <h3>Report Requirements</h3>
+
+            <ul>
+              <li>
+                A clear explanation of how the spreadsheet workflow was translated into Python modules.
+              </li>
+              <li>
+                A description of the input data needed for each module and how the code processes it.
+              </li>
+              <li>
+                Plots showing combined gradation, load versus displacement, and rut depth versus cycles.
+              </li>
+              <li>
+                A discussion of how validity checks, CT index calculations, stripping inflection point
+                detection, and pass/fail decisions were implemented.
+              </li>
+              <li>
+                A user-focused explanation of how an NDOT engineer could run or adapt the tool.
+              </li>
+              <li>
+                References and citations for all NDOT documents, formulas, and supporting resources used.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

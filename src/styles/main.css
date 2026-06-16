@@ -1,0 +1,13 @@
+@import './variables.css';
+@import './base.css';
+@import './header.css';
+@import './footer.css';
+@import './home.css';
+@import './course-overview.css';
+@import './course-matters.css';
+@import './student_outcomes.css';
+@import './team.css';
+@import './project.css';
+@import './course-philosophy.css';
+@import './project-detail.css';
+@import './publication.css';
